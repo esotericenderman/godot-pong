@@ -1,7 +1,7 @@
 cff-version: 1.2.0
-title: Template
+title: Godot Pong
 message: If you need to cite this project, please do it as specified in this file.
-type: generic
+type: software
 authors:
   - name: Esoteric Enderman
     alias: EE
@@ -10,19 +10,16 @@ authors:
     orcid: 'https://orcid.org/0009-0007-4990-9556'
 identifiers:
   - type: url
-    value: 'https://github.com/esoterictemplates/template'
+    value: 'https://github.com/esotericenderman/godot-pong'
     description: The link to the GitHub repository.
-repository-code: 'https://github.com/esoterictemplates/template'
-url: https://github.com/esoterictemplates/template?tab=readme-ov-file
-repository-artifact: 'https://github.com/esoterictemplates/template/releases'
+repository-code: 'https://github.com/esotericenderman/godot-pong'
+url: https://github.com/esotericenderman/godot-pong?tab=readme-ov-file
+repository-artifact: 'https://github.com/esotericenderman/godot-pong/releases'
 abstract: >
-  This repository serves as a general-purpose template for generating new projects.
+  A pong game made using the Godot game engine.
 keywords:
-  - template
-  - repository
-  - generate
-  - generator
-  - github
+  - godot
+  - pong
 license: GPL-3.0
 commit: 0d096f819d8818c651247cf5f60c39eae391ea45
 version: 3.0.0
