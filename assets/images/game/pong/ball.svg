@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="250" role="img" aria-label="Ball">
+    <title>Ball</title>
+    <circle r="125" cx="125" cy="125" fill="white" />
+</svg>

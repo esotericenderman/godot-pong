@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8vfpraselkm2"]
+[gd_scene load_steps=3 format=3 uid="uid://c8vfpraselkm2"]
 
 [ext_resource type="Texture2D" uid="uid://c6cpuw5dpokh6" path="res://assets/images/game/background.svg" id="1_kjj5u"]
+[ext_resource type="Texture2D" uid="uid://deqoeg5tolbnn" path="res://assets/images/game/pong/ball.svg" id="2_u28ys"]
 
 [node name="Pong" type="Node2D"]
 
@@ -8,3 +9,10 @@
 position = Vector2(572, 340)
 scale = Vector2(9.053, 9)
 texture = ExtResource("1_kjj5u")
+
+[node name="Ball" type="Node2D" parent="."]
+
+[node name="Ball" type="Sprite2D" parent="Ball"]
+position = Vector2(600, 350)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_u28ys")
