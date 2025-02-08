@@ -3,6 +3,13 @@ extends Node2D
 var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
+	var parent = self.get_parent() as Sprite2D
+	
+	var width = parent.get_rect().size.x
+	var height = parent.get_rect().size.y
+	
+	self.position = Vector2(width / 2, height / 2)
+	
 	var random = rng.randf()
 	
 	var direction: Vector2
@@ -35,7 +42,7 @@ func _ready() -> void:
 		
 	var body = child as RigidBody2D
 	
-	var force = direction * 25000
+	var force = direction * 1250
 	
 	print("Applying force: " + str(force))
 	

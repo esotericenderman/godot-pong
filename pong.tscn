@@ -7,17 +7,18 @@
 [node name="Pong" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(572, 340)
-scale = Vector2(9.053, 9)
+scale = Vector2(7.2, 7.2)
 texture = ExtResource("1_kjj5u")
+centered = false
 
-[node name="Ball" type="Node2D" parent="."]
+[node name="Ball" type="Node2D" parent="Background"]
+scale = Vector2(0.15, 0.15)
 script = ExtResource("2_f8yfw")
 
-[node name="Ball Rigidbody" type="RigidBody2D" parent="Ball"]
+[node name="Ball Rigidbody" type="RigidBody2D" parent="Background/Ball"]
+mass = 0.05
 gravity_scale = 0.0
 
-[node name="Ball" type="Sprite2D" parent="Ball/Ball Rigidbody"]
-position = Vector2(600, 350)
+[node name="Ball" type="Sprite2D" parent="Background/Ball/Ball Rigidbody"]
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_u28ys")
