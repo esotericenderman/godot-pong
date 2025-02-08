@@ -1,10 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8vfpraselkm2"]
+[gd_scene load_steps=7 format=3 uid="uid://c8vfpraselkm2"]
 
 [ext_resource type="Texture2D" uid="uid://c6cpuw5dpokh6" path="res://assets/images/game/background.svg" id="1_kjj5u"]
 [ext_resource type="Script" path="res://scripts/ball.gd" id="2_f8yfw"]
 [ext_resource type="Texture2D" uid="uid://deqoeg5tolbnn" path="res://assets/images/game/pong/ball.svg" id="2_u28ys"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mw2hy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_600bw"]
+size = Vector2(159.306, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqc1y"]
+size = Vector2(20.4166, 88.8889)
 
 [node name="Pong" type="Node2D"]
 
@@ -26,3 +32,35 @@ texture = ExtResource("2_u28ys")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Ball"]
 scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_mw2hy")
+
+[node name="Top Wall" type="RigidBody2D" parent="Background"]
+lock_rotation = true
+freeze = true
+
+[node name="Long Wall Collision" type="CollisionShape2D" parent="Background/Top Wall"]
+position = Vector2(80, -10)
+shape = SubResource("RectangleShape2D_600bw")
+
+[node name="Bottom Wall" type="RigidBody2D" parent="Background"]
+lock_rotation = true
+freeze = true
+
+[node name="Long Wall Collision" type="CollisionShape2D" parent="Background/Bottom Wall"]
+position = Vector2(80, 100)
+shape = SubResource("RectangleShape2D_600bw")
+
+[node name="Right Wall" type="RigidBody2D" parent="Background"]
+lock_rotation = true
+freeze = true
+
+[node name="Short Wall Collision" type="CollisionShape2D" parent="Background/Right Wall"]
+position = Vector2(170, 45)
+shape = SubResource("RectangleShape2D_uqc1y")
+
+[node name="Left Wall" type="RigidBody2D" parent="Background"]
+lock_rotation = true
+freeze = true
+
+[node name="Short Wall Collision" type="CollisionShape2D" parent="Background/Left Wall"]
+position = Vector2(-10, 45)
+shape = SubResource("RectangleShape2D_uqc1y")
