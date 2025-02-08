@@ -4,7 +4,7 @@
 
 [![Project Status: Unfinished][status]][root] [![Repository Size][size]][root]
 
-Project description.
+Pong made using the Godot game engine (my first Godot game).
 
 ## Usage
 
@@ -31,7 +31,7 @@ Project description.
 
 ## License
 
-[Repository Name][root] &copy; \<year> [\<name of author>][author-website]
+[Godot Pong][root] &copy; 2025 [Esoteric Enderman][author-website]
 
 This program is free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License][gpl-3.0] as published by the [Free Software Foundation][fsf], either [version 3][gpl-3.0] of the License, or (at your option) any later version.
 
@@ -53,7 +53,7 @@ You should have received a copy of the [GNU General Public License][gpl-3.0] alo
 
 <!-- This project -->
 
-[author-website]: https://author.xyz
+[author-website]: https://enderman.dev
 
 <!-- Template -->
 
@@ -81,4 +81,4 @@ You should have received a copy of the [GNU General Public License][gpl-3.0] alo
 <!-- Badges -->
 
 [status]: ../assets/images/badges/status/unfinished.svg
-[size]: https://img.shields.io/github/repo-size/author/project?style=for-the-badge&logo=git&label=Repository%20size
+[size]: https://img.shields.io/github/repo-size/esotericenderman/godot-pong?style=for-the-badge&logo=git&label=Repository%20size
