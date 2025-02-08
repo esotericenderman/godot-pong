@@ -4,7 +4,7 @@
 
 [node name="Pong" type="Node2D"]
 
-[node name="Background2" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(572, 340)
 scale = Vector2(9.053, 9)
 texture = ExtResource("1_kjj5u")
