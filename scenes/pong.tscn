@@ -102,6 +102,7 @@ mass = 0.05
 physics_material_override = SubResource("PhysicsMaterial_enhog")
 gravity_scale = 0.0
 lock_rotation = true
+linear_damp = 10.0
 script = ExtResource("4_x4vja")
 
 [node name="Left Paddle Collision" type="CollisionShape2D" parent="Left Paddle"]
