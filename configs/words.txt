@@ -74,3 +74,4 @@ JetBrains
 LF
 xml
 yaml
+godot
