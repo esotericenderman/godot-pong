@@ -50,7 +50,7 @@ script = ExtResource("2_02qod")
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_avyfs")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Ball"]
+[node name="Ball Collision Shape" type="CollisionShape2D" parent="Background/Ball"]
 scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_mw2hy")
 
