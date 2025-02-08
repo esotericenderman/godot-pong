@@ -3,16 +3,13 @@ extends Node2D
 var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
-	const right = Vector2(-1, 0)
-	const left = Vector2(1, 0)
-	
 	var random = rng.randf()
 	
 	var direction: Vector2
 	if (random > 0.5):
-		direction = right
+		direction = Vector2.RIGHT
 	else:
-		direction = left
+		direction = Vector2.LEFT
 	
 	print("Selected random direction for the ball: " + str(direction))
 	
