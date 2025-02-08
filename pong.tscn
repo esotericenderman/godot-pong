@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8vfpraselkm2"]
+
+[ext_resource type="Texture2D" uid="uid://c6cpuw5dpokh6" path="res://assets/images/game/background.svg" id="1_kjj5u"]
+
+[node name="Pong" type="Node2D"]
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(572, 340)
+scale = Vector2(9.053, 9)
+texture = ExtResource("1_kjj5u")
