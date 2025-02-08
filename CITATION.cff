@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: Template
+message: If you need to cite this project, please do it as specified in this file.
+type: generic
+authors:
+  - name: Esoteric Enderman
+    alias: EE
+    website: 'https://enderman.dev'
+    email: esotericenderman@gmail.com
+    orcid: 'https://orcid.org/0009-0007-4990-9556'
+identifiers:
+  - type: url
+    value: 'https://github.com/esoterictemplates/template'
+    description: The link to the GitHub repository.
+repository-code: 'https://github.com/esoterictemplates/template'
+url: https://github.com/esoterictemplates/template?tab=readme-ov-file
+repository-artifact: 'https://github.com/esoterictemplates/template/releases'
+abstract: >
+  This repository serves as a general-purpose template for generating new projects.
+keywords:
+  - template
+  - repository
+  - generate
+  - generator
+  - github
+license: GPL-3.0
+commit: 0d096f819d8818c651247cf5f60c39eae391ea45
+version: 3.0.0
+date-released: '2025-02-08'

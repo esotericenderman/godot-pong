@@ -1,0 +1,77 @@
+# Lock files
+*.lock
+~$*.*
+
+## LibreOffice and OpenOffice temporary files
+.~lock.*#
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.7z
+*.rar
+## Minecraft Bedrock edition worlds
+*.mcworld
+## Minecraft Modrinth modpacks
+*.mrpack
+
+## Microsoft Office file formats (ZIP-based)
+*.docx
+*.dotx
+*.xlsx
+*.xlsm
+*.xltx
+*.xlsb
+*.pptx
+*.ppsx
+*.potx
+
+## OpenDocument file formats (ZIP-based)
+*.odt
+*.ods
+*.odp
+*.odg
+*.odf
+*.odm
+*.ott
+
+# Installer files
+*.iso
+
+## Windows installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Executables
+*.bin
+*.exe
+*.apk
+
+## Common compiled files
+dist
+
+## Java executables and compiled files
+*.jar
+*.class
+
+## Libraries
+### Node.js packages
+node_modules
+
+## Gradle wrapper
+gradlew
+gradlew.bat
+
+# Node.js package information
+package-lock.json
+
+# Logs
+
+## Kotlin compiler output
+.kotlin/sessions/kotlin-compiler-[0-9]*.salive
