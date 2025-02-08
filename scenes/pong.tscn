@@ -13,21 +13,25 @@ bounce = 1.0
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2gnp3"]
 friction = 0.0
+bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_600bw"]
 size = Vector2(159.306, 20)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0c4es"]
 friction = 0.0
+bounce = 1.0
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f22gi"]
 friction = 0.0
+bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqc1y"]
 size = Vector2(20.4166, 88.8889)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t4n2d"]
 friction = 0.0
+bounce = 1.0
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_enhog"]
 friction = 0.0
@@ -98,7 +102,6 @@ shape = SubResource("RectangleShape2D_uqc1y")
 
 [node name="Left Paddle" type="RigidBody2D" parent="."]
 position = Vector2(72, 108)
-mass = 0.05
 physics_material_override = SubResource("PhysicsMaterial_enhog")
 gravity_scale = 0.0
 lock_rotation = true
