@@ -11,6 +11,14 @@ func _ready() -> void:
 	else:
 		direction = Vector2.LEFT
 	
+	var otherRandom = rng.randf()
+	
+	var vertical: Vector2
+	if (	otherRandom > 0.5):
+		direction += Vector2.UP
+	else:
+		direction += Vector2.DOWN
+	
 	print("Selected random direction for the ball: " + str(direction))
 	
 	const id = 0
