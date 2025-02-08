@@ -55,6 +55,7 @@
 
 ## Common compiled files
 dist
+build
 
 ## Java executables and compiled files
 *.jar
