@@ -14,3 +14,7 @@ config/name="Pong"
 run/main_scene="res://pong.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[physics]
+
+2d/default_linear_damp=0.0
