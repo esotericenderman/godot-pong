@@ -1,4 +1,4 @@
-# Project Name
+# Godot Pong
 
 <sup>Generated from [Template][template] [3.0.0][template-version]</sup>
 
