@@ -16,7 +16,7 @@ friction = 0.0
 bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_600bw"]
-size = Vector2(159.306, 20)
+size = Vector2(159.306, 539.028)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0c4es"]
 friction = 0.0
@@ -27,7 +27,7 @@ friction = 0.0
 bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqc1y"]
-size = Vector2(20.4166, 88.8889)
+size = Vector2(785.208, 1049.72)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t4n2d"]
 friction = 0.0
@@ -70,7 +70,7 @@ lock_rotation = true
 freeze = true
 
 [node name="Long Wall Collision" type="CollisionShape2D" parent="Background/Top Wall"]
-position = Vector2(80, -10)
+position = Vector2(80, -269.514)
 shape = SubResource("RectangleShape2D_600bw")
 
 [node name="Bottom Wall" type="RigidBody2D" parent="Background"]
@@ -79,7 +79,7 @@ lock_rotation = true
 freeze = true
 
 [node name="Long Wall Collision" type="CollisionShape2D" parent="Background/Bottom Wall"]
-position = Vector2(80, 100)
+position = Vector2(80, 360)
 shape = SubResource("RectangleShape2D_600bw")
 
 [node name="Right Wall" type="RigidBody2D" parent="Background"]
@@ -88,7 +88,7 @@ lock_rotation = true
 freeze = true
 
 [node name="Short Wall Collision" type="CollisionShape2D" parent="Background/Right Wall"]
-position = Vector2(170, 45)
+position = Vector2(552.5, -50.139)
 shape = SubResource("RectangleShape2D_uqc1y")
 
 [node name="Left Wall" type="RigidBody2D" parent="Background"]
@@ -97,7 +97,7 @@ lock_rotation = true
 freeze = true
 
 [node name="Short Wall Collision" type="CollisionShape2D" parent="Background/Left Wall"]
-position = Vector2(-10, 45)
+position = Vector2(-392.396, -1.38888)
 shape = SubResource("RectangleShape2D_uqc1y")
 
 [node name="Left Paddle" type="RigidBody2D" parent="."]
