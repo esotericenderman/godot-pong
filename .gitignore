@@ -81,3 +81,8 @@ package-lock.json
 ## Godot 4+ specific ignores
 .godot
 android
+
+# Other
+
+## Files Godot does not need
+assets/images/badges/status/*.import
