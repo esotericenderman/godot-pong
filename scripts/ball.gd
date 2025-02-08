@@ -18,10 +18,10 @@ func _ready() -> void:
 	else:
 		direction = Vector2.LEFT
 	
-	var otherRandom = rng.randf()
+	var other_random = rng.randf()
 	
 	var vertical: Vector2
-	if (	otherRandom > 0.5):
+	if (	other_random > 0.5):
 		direction += Vector2.UP
 	else:
 		direction += Vector2.DOWN
