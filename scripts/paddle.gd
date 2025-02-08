@@ -53,7 +53,7 @@ func _process(delta: float) -> void:
 	else:
 		return
 	
-	var force = direction * 9000
+	var force = direction * 45000
 	
 	self.apply_force(force)
 	

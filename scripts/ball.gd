@@ -30,7 +30,7 @@ func _ready() -> void:
 	
 	const id = 0
 
-	var force = direction * 1250
+	var force = direction * 27000
 	
 	print("Applying force: " + str(force))
 
