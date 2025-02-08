@@ -11,14 +11,12 @@ scale = Vector2(7.2, 7.2)
 texture = ExtResource("1_kjj5u")
 centered = false
 
-[node name="Ball" type="Node2D" parent="Background"]
+[node name="Ball" type="RigidBody2D" parent="Background"]
 scale = Vector2(0.15, 0.15)
-script = ExtResource("2_f8yfw")
-
-[node name="Ball Rigidbody" type="RigidBody2D" parent="Background/Ball"]
 mass = 0.05
 gravity_scale = 0.0
+script = ExtResource("2_f8yfw")
 
-[node name="Ball" type="Sprite2D" parent="Background/Ball/Ball Rigidbody"]
+[node name="Ball Texture" type="Sprite2D" parent="Background/Ball"]
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_u28ys")
