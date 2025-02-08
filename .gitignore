@@ -75,3 +75,8 @@ package-lock.json
 
 ## Kotlin compiler output
 .kotlin/sessions/kotlin-compiler-[0-9]*.salive
+
+# User-specific files
+# Godot 4+ specific ignores
+.godot
+android
