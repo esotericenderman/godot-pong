@@ -1,4 +1,4 @@
-# Godot Pong
+# [Godot Pong][itch]
 
 <sup>Generated from [Template][template] [3.0.0][template-version]</sup>
 
@@ -58,6 +58,7 @@ game gamedev games game-development game-2d godot godot-engine game-dev game-dev
 <!-- This project -->
 
 [author-website]: https://enderman.dev
+[itch]: https://esotericenderman.itch.io/godot-pong
 
 <!-- Template -->
 
