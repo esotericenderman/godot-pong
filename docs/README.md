@@ -2,7 +2,7 @@
 
 <sup>Generated from [Template][template] [3.0.0][template-version]</sup>
 
-[![Project Status: Unfinished][status]][root] [![Repository Size][size]][root]
+[![Project Status: Completed][status]][root] [![Repository Size][size]][root]
 
 Pong made using the Godot game engine (my first Godot game).
 
@@ -84,5 +84,5 @@ game gamedev games game-development game-2d godot godot-engine game-dev game-dev
 
 <!-- Badges -->
 
-[status]: ../assets/images/badges/status/unfinished.svg
+[status]: ../assets/images/badges/status/completed.svg
 [size]: https://img.shields.io/github/repo-size/esotericenderman/godot-pong?style=for-the-badge&logo=git&label=Repository%20size
