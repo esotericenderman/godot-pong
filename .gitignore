@@ -55,7 +55,7 @@
 
 ## Common compiled files
 dist
-build
+build/*
 
 ## Java executables and compiled files
 *.jar
@@ -82,3 +82,8 @@ package-lock.json
 ## Godot 4+ specific ignores
 .godot
 android
+
+# Godot
+
+## Make sure the build directory is ignored within Godot
+!build/.gdignore
