@@ -1,6 +1,9 @@
 extends RichTextLabel
 
 
+@export var computer_points = 0
+@export var player_points = 0
+
 func _ready() -> void:
 	var parent = get_parent().get_node("Background") as Sprite2D
 	

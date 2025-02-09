@@ -13,7 +13,7 @@ func _ready() -> void:
 	contact_monitor = true
 	max_contacts_reported = 50
 	
-	reset()
+	reset("none")
 
 func _process(delta: float) -> void:
 	var colliding = get_colliding_bodies()
@@ -29,14 +29,14 @@ func _process(delta: float) -> void:
 		
 		if object == right_wall:
 			print("Player's point")
-			reset()
+			reset("player")
 		elif object == left_wall:
-			reset()
+			reset("computer")
 			print("Computer's point")
 	
 	pass
 
-func reset():	
+func reset(winner: String) -> void:	
 	self.freeze = true  # Temporarily disable physics
 	var parent = get_parent().get_node("Background") as Sprite2D
 	
@@ -66,3 +66,14 @@ func reset():
 
 	self.freeze = false  # Re-enable physics
 	self.linear_velocity = direction * speed
+	
+	var score = get_parent().get_node("Score") as RichTextLabel
+	
+	if winner == "player":
+		score.player_points += 1
+		pass
+	elif winner == "computer":
+		score.computer_points += 1
+		pass
+		
+	score.text = str(score.player_points) + " | " + str(score.computer_points)
