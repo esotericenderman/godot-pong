@@ -21,6 +21,6 @@ keywords:
   - godot
   - pong
 license: GPL-3.0
-commit: 
-version: 
-date-released: 
+commit: 4241a37f69ef9fcfa76f093922af9a1c7a00de46
+version: 1.0.0
+date-released: '2025-02-09'
