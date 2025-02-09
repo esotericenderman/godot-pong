@@ -148,4 +148,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(3, 3)
 text = "0 | 0"
+fit_content = true
+autowrap_mode = 0
 script = ExtResource("5_8fmgm")
