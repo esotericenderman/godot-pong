@@ -57,6 +57,7 @@ gravity_scale = 0.0
 lock_rotation = true
 linear_damp = 10.0
 script = ExtResource("4_x4vja")
+metadata/computer = false
 
 [node name="Collision" type="CollisionShape2D" parent="LeftPaddle"]
 scale = Vector2(7.2, 7.2)
