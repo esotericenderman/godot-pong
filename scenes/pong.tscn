@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://c8vfpraselkm2"]
+[gd_scene load_steps=16 format=3 uid="uid://c8vfpraselkm2"]
 
 [ext_resource type="Texture2D" uid="uid://c6cpuw5dpokh6" path="res://assets/images/game/background.svg" id="1_rohbh"]
 [ext_resource type="Script" path="res://scripts/ball.gd" id="2_02qod"]
-[ext_resource type="Script" path="res://scripts/background.gd" id="2_gfda7"]
 [ext_resource type="Texture2D" uid="uid://deqoeg5tolbnn" path="res://assets/images/game/pong/ball.svg" id="3_avyfs"]
 [ext_resource type="Script" path="res://scripts/paddle.gd" id="4_x4vja"]
 
@@ -49,7 +48,6 @@ bounce = 1.0
 scale = Vector2(7.2, 7.2)
 texture = ExtResource("1_rohbh")
 centered = false
-script = ExtResource("2_gfda7")
 
 [node name="LeftPaddle" type="RigidBody2D" parent="."]
 position = Vector2(72, 108)
