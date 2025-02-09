@@ -1,0 +1,14 @@
+name: godot
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+      - name: Godot CI
+        uses: abarichello/godot-ci@4.3-stable
