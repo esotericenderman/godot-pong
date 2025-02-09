@@ -31,6 +31,8 @@ func _ready() -> void:
 	sprite_staring_x = collider.position.x
 	
 	print("Starting x: " + str(starting_x))
+	print("Starting collider x: " + str(collider_starting_x))
+	print("Starting sprite x: " + str(sprite_staring_x))
 	
 	pass
 
