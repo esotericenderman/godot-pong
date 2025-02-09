@@ -8,37 +8,17 @@ var starting_x: int
 var collider_starting_x: int
 var sprite_staring_x: int
 
-func _ready() -> void:
-	print("Children: ")
-	for child in get_children():
-		var id = child.rpc_id
-		var index = child.get_index()
 
-		print("RPC ID: " + str(id))
-		print("Index: " + str(index))
-		print(str(child))
-	
+func _ready() -> void:
 	collider = get_node("Collision") as CollisionShape2D
-	
-	print("Found collider: " + str(collider))
-	
 	sprite = get_node("Sprite") as Sprite2D
 
-	print("Found sprite: " + str(sprite))
-	
 	starting_x = position.x
 	collider_starting_x = collider.position.x
 	sprite_staring_x = sprite.position.x
-	
-	print("Starting x: " + str(starting_x))
-	print("Starting collider x: " + str(collider_starting_x))
-	print("Starting sprite x: " + str(sprite_staring_x))
-	
-	pass
-
 
 func _process(delta: float) -> void:
-	self.position.x = starting_x
+	position.x = starting_x
 	collider.position.x = collider_starting_x
 	sprite.position.x = sprite_staring_x
 
@@ -59,21 +39,13 @@ func _process(delta: float) -> void:
 	
 	var force = direction * 45000
 	
-	self.apply_force(force)
-	
-	if collider.position.x != collider_starting_x:
-		print("Wrong collider position!")
-		
-	if position.x != starting_x:
-		print("Wrong position!")
-	
-	pass
+	apply_force(force)
 
 func computer_move():
 	var ball = get_parent().get_node("Ball") as RigidBody2D
 	
 	var target_y = ball.position.y
-	var current_y = self.position.y
+	var current_y = position.y
 	
 	var direction: Vector2
 	if (target_y > current_y):
@@ -85,6 +57,4 @@ func computer_move():
 		
 	var force = 45000 * direction
 	
-	self.apply_force(force)
-	
-	pass
+	apply_force(force)
