@@ -79,3 +79,4 @@ developement
 gamedev
 gamedevelopment
 png
+Singleplayer
