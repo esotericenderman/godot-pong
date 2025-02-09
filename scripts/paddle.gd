@@ -4,9 +4,9 @@ extends RigidBody2D
 var collider: CollisionShape2D
 var sprite: Sprite2D
 
-var starting_x: int
-var collider_starting_x: int
-var sprite_staring_x: int
+var starting_x: float
+var collider_starting_x: float
+var sprite_staring_x: float
 
 
 func _ready() -> void:
