@@ -6,6 +6,8 @@
 
 Pong made using the Godot game engine (my first Godot game).
 
+![A screenshot of the pong game][pong]
+
 ## Usage
 
 ### Updating This Project
@@ -78,6 +80,16 @@ game gamedev games game-development game-2d godot godot-engine game-dev game-dev
 [ideas]: ./TODO.md
 [citation]: ../CITATION.cff
 [conduct]: ./CODE_OF_CONDUCT.md
+
+<!-- Assets -->
+
+<!-- Images -->
+
+<!-- Screenshots -->
+
+<!-- Pong screenshots -->
+
+[pong]: ../itch/assets/images/screenshots/pong/pong.png
 
 <!-- Licenses -->
 
