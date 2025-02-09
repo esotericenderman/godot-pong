@@ -45,7 +45,7 @@ func reset(winner: String) -> void:
 	linear_velocity = Vector2.ZERO
 	angular_velocity = 0
 
-	linear_velocity = direction * 300
+	linear_velocity = direction * 450
 	
 	var score = get_parent().get_node("Score") as RichTextLabel
 	

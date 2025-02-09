@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends StaticBody2D
 
 
 var collider: CollisionShape2D
@@ -17,7 +17,7 @@ func _ready() -> void:
 	collider_starting_x = collider.position.x
 	sprite_staring_x = sprite.position.x
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	position.x = starting_x
 	collider.position.x = collider_starting_x
 	sprite.position.x = sprite_staring_x
@@ -25,7 +25,7 @@ func _process(_delta: float) -> void:
 	var is_computer = get_meta("computer")
 	
 	if (is_computer):
-		computer_move()
+		computer_move(delta)
 		return
 
 	var direction: Vector2
@@ -37,11 +37,9 @@ func _process(_delta: float) -> void:
 	else:
 		return
 	
-	var force = direction * 45000
-	
-	apply_force(force)
+	self.position += direction * 400 * delta
 
-func computer_move():
+func computer_move(delta: float):
 	var ball = get_parent().get_node("Ball") as RigidBody2D
 	
 	var target_y = ball.position.y
@@ -55,6 +53,4 @@ func computer_move():
 	else:
 		return
 		
-	var force = 45000 * direction
-	
-	apply_force(force)
+	self.position += direction * 400 * delta
