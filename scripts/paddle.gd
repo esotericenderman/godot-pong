@@ -18,11 +18,11 @@ func _ready() -> void:
 		print("Index: " + str(index))
 		print(str(child))
 	
-	collider = get_children()[0] as CollisionShape2D
+	collider = get_node("Collision") as CollisionShape2D
 	
 	print("Found collider: " + str(collider))
 	
-	sprite = collider.get_children()[0] as Sprite2D
+	sprite = get_node("Sprite") as Sprite2D
 
 	print("Found sprite: " + str(sprite))
 	

@@ -1,9 +1,19 @@
-[gd_scene load_steps=16 format=3 uid="uid://c8vfpraselkm2"]
+[gd_scene load_steps=17 format=3 uid="uid://c8vfpraselkm2"]
 
 [ext_resource type="Texture2D" uid="uid://c6cpuw5dpokh6" path="res://assets/images/game/background.svg" id="1_rohbh"]
 [ext_resource type="Script" path="res://scripts/ball.gd" id="2_02qod"]
+[ext_resource type="Script" path="res://scripts/background.gd" id="2_gfda7"]
 [ext_resource type="Texture2D" uid="uid://deqoeg5tolbnn" path="res://assets/images/game/pong/ball.svg" id="3_avyfs"]
 [ext_resource type="Script" path="res://scripts/paddle.gd" id="4_x4vja"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_enhog"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_inhci"]
+size = Vector2(4.02778, 17.7778)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_pne15"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8pjfs"]
 friction = 0.0
@@ -33,73 +43,15 @@ size = Vector2(785.208, 1049.72)
 friction = 0.0
 bounce = 1.0
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_enhog"]
-friction = 0.0
-bounce = 1.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_inhci"]
-size = Vector2(4.02778, 17.7778)
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_pne15"]
-
 [node name="Pong" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
 scale = Vector2(7.2, 7.2)
 texture = ExtResource("1_rohbh")
 centered = false
+script = ExtResource("2_gfda7")
 
-[node name="Ball" type="RigidBody2D" parent="Background"]
-scale = Vector2(0.15, 0.15)
-physics_material_override = SubResource("PhysicsMaterial_8pjfs")
-gravity_scale = 0.0
-script = ExtResource("2_02qod")
-
-[node name="Ball Texture" type="Sprite2D" parent="Background/Ball"]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("3_avyfs")
-
-[node name="Ball Collision Shape" type="CollisionShape2D" parent="Background/Ball"]
-scale = Vector2(3, 3)
-shape = SubResource("CircleShape2D_mw2hy")
-
-[node name="Top Wall" type="RigidBody2D" parent="Background"]
-physics_material_override = SubResource("PhysicsMaterial_2gnp3")
-lock_rotation = true
-freeze = true
-
-[node name="Long Wall Collision" type="CollisionShape2D" parent="Background/Top Wall"]
-position = Vector2(80, -269.514)
-shape = SubResource("RectangleShape2D_600bw")
-
-[node name="Bottom Wall" type="RigidBody2D" parent="Background"]
-physics_material_override = SubResource("PhysicsMaterial_0c4es")
-lock_rotation = true
-freeze = true
-
-[node name="Long Wall Collision" type="CollisionShape2D" parent="Background/Bottom Wall"]
-position = Vector2(80, 360)
-shape = SubResource("RectangleShape2D_600bw")
-
-[node name="Right Wall" type="RigidBody2D" parent="Background"]
-physics_material_override = SubResource("PhysicsMaterial_f22gi")
-lock_rotation = true
-freeze = true
-
-[node name="Short Wall Collision" type="CollisionShape2D" parent="Background/Right Wall"]
-position = Vector2(552.5, -50.139)
-shape = SubResource("RectangleShape2D_uqc1y")
-
-[node name="Left Wall" type="RigidBody2D" parent="Background"]
-physics_material_override = SubResource("PhysicsMaterial_t4n2d")
-lock_rotation = true
-freeze = true
-
-[node name="Short Wall Collision" type="CollisionShape2D" parent="Background/Left Wall"]
-position = Vector2(-392.396, -1.38888)
-shape = SubResource("RectangleShape2D_uqc1y")
-
-[node name="Left Paddle" type="RigidBody2D" parent="."]
+[node name="LeftPaddle" type="RigidBody2D" parent="."]
 position = Vector2(72, 108)
 mass = 10.0
 physics_material_override = SubResource("PhysicsMaterial_enhog")
@@ -108,10 +60,64 @@ lock_rotation = true
 linear_damp = 10.0
 script = ExtResource("4_x4vja")
 
-[node name="Left Paddle Collision" type="CollisionShape2D" parent="Left Paddle"]
+[node name="Collision" type="CollisionShape2D" parent="LeftPaddle"]
 scale = Vector2(7.2, 7.2)
 shape = SubResource("RectangleShape2D_inhci")
 
-[node name="Left Paddle Sprite" type="Sprite2D" parent="Left Paddle/Left Paddle Collision"]
-scale = Vector2(3, 17)
+[node name="Sprite" type="Sprite2D" parent="LeftPaddle"]
+scale = Vector2(29, 130)
 texture = SubResource("CanvasTexture_pne15")
+
+[node name="Ball" type="RigidBody2D" parent="."]
+position = Vector2(0, 1)
+physics_material_override = SubResource("PhysicsMaterial_8pjfs")
+gravity_scale = 0.0
+script = ExtResource("2_02qod")
+
+[node name="Texture" type="Sprite2D" parent="Ball"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_avyfs")
+
+[node name="Collision" type="CollisionShape2D" parent="Ball"]
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_mw2hy")
+
+[node name="TopWall" type="RigidBody2D" parent="."]
+position = Vector2(575, -1940)
+physics_material_override = SubResource("PhysicsMaterial_2gnp3")
+lock_rotation = true
+freeze = true
+
+[node name="Collision" type="CollisionShape2D" parent="TopWall"]
+scale = Vector2(7.2, 7.2)
+shape = SubResource("RectangleShape2D_600bw")
+
+[node name="BottomWall" type="RigidBody2D" parent="."]
+position = Vector2(575, 2590)
+physics_material_override = SubResource("PhysicsMaterial_0c4es")
+lock_rotation = true
+freeze = true
+
+[node name="Collision" type="CollisionShape2D" parent="BottomWall"]
+scale = Vector2(7.2, 7.2)
+shape = SubResource("RectangleShape2D_600bw")
+
+[node name="RightWall" type="RigidBody2D" parent="."]
+position = Vector2(3980, 90)
+physics_material_override = SubResource("PhysicsMaterial_f22gi")
+lock_rotation = true
+freeze = true
+
+[node name="Collision" type="CollisionShape2D" parent="RightWall"]
+scale = Vector2(7.2, 7.2)
+shape = SubResource("RectangleShape2D_uqc1y")
+
+[node name="LeftWall" type="RigidBody2D" parent="."]
+position = Vector2(-2827, 230)
+physics_material_override = SubResource("PhysicsMaterial_t4n2d")
+lock_rotation = true
+freeze = true
+
+[node name="Collision" type="CollisionShape2D" parent="LeftWall"]
+scale = Vector2(7.2, 7.2)
+shape = SubResource("RectangleShape2D_uqc1y")

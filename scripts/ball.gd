@@ -3,10 +3,10 @@ extends RigidBody2D
 var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
-	var parent = self.get_parent() as Sprite2D
+	var parent = get_parent().get_node("Background") as Sprite2D
 	
-	var width = parent.get_rect().size.x
-	var height = parent.get_rect().size.y
+	var width = parent.texture.get_size().x * parent.scale.x
+	var height = parent.texture.get_size().y * parent.scale.x
 	
 	self.position = Vector2(width / 2, height / 2)
 	
