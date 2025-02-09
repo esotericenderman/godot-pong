@@ -28,7 +28,7 @@ func _ready() -> void:
 	
 	starting_x = position.x
 	collider_starting_x = collider.position.x
-	sprite_staring_x = collider.position.x
+	sprite_staring_x = sprite.position.x
 	
 	print("Starting x: " + str(starting_x))
 	print("Starting collider x: " + str(collider_starting_x))
