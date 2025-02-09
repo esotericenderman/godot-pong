@@ -43,6 +43,10 @@ You should have received a copy of the [GNU General Public License][gpl-3.0] alo
 
 - [Template Repository][template] &copy; [Esoteric Enderman][template-author] licensed under [GPL-3.0][gpl-3.0].
 
+## Topics
+
+game gamedev games game-development game-2d godot godot-engine game-dev game-develop gamedevelopment godot-game-engine godot-game game-developement game-developers game-developer godot-games godot4 godot-game-dev
+
 <!-- Link aliases -->
 
 [root]: ./
