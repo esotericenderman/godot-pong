@@ -17,7 +17,7 @@ func _ready() -> void:
 	collider_starting_x = collider.position.x
 	sprite_staring_x = sprite.position.x
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	position.x = starting_x
 	collider.position.x = collider_starting_x
 	sprite.position.x = sprite_staring_x

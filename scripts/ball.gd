@@ -16,7 +16,7 @@ func _ready() -> void:
 	
 	reset("none")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var colliding = get_colliding_bodies()
 	
 	if len(colliding) == 0:
