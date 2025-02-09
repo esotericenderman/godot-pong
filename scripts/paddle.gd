@@ -49,10 +49,8 @@ func _process(delta: float) -> void:
 	var direction: Vector2
 
 	if Input.is_action_pressed("ui_up"):
-		print("Player is moving up.")
 		direction = Vector2.UP
 	elif Input.is_action_pressed("ui_down"):
-		print("Player is moving down.")
 		direction = Vector2.DOWN
 	else:
 		return
