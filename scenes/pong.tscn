@@ -67,7 +67,7 @@ scale = Vector2(29, 130)
 texture = SubResource("CanvasTexture_pne15")
 
 [node name="RightPaddle" type="RigidBody2D" parent="."]
-position = Vector2(1075, 535)
+position = Vector2(1080, 535)
 mass = 10.0
 physics_material_override = SubResource("PhysicsMaterial_enhog")
 gravity_scale = 0.0
