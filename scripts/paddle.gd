@@ -61,6 +61,12 @@ func _process(delta: float) -> void:
 	
 	self.apply_force(force)
 	
+	if collider.position.x != collider_starting_x:
+		print("Wrong collider position!")
+		
+	if position.x != starting_x:
+		print("Wrong position!")
+	
 	pass
 
 func computer_move():

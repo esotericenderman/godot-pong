@@ -1,8 +1,18 @@
 extends RigidBody2D
 
+
+var right_wall: RigidBody2D
+var left_wall: RigidBody2D
+
 var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
+	right_wall = get_parent().get_node("RightWall")
+	left_wall = get_parent().get_node("LeftWall")
+	
+	contact_monitor = true
+	max_contacts_reported = 50
+	
 	var parent = get_parent().get_node("Background") as Sprite2D
 	
 	var width = parent.texture.get_size().x * parent.scale.x
@@ -40,4 +50,20 @@ func _ready() -> void:
 	self.apply_force(force)
 
 func _process(delta: float) -> void:
+	var colliding = get_colliding_bodies()
+	
+	if len(colliding) != 0:
+		print("Something is colliding with the ball...")
+	else:
+		return
+	
+	for object in colliding:
+		print(str(object))
+		pass
+		
+		if object == right_wall:
+			print("Player's point")
+		elif object == left_wall:
+			print("Computer's point")
+	
 	pass
