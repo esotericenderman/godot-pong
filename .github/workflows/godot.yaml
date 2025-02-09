@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  lint:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project
