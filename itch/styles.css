@@ -1,0 +1,12 @@
+.wrapper {
+    --itchio_font_family: Lato;
+    --itchio_bg_color: #000000;
+    --itchio_bg2_color: rgba(0, 0, 0, 1);
+    --itchio_bg2_sub: #191919;
+    --itchio_text_color: #ffffff;
+    --itchio_link_color: #5a9dfa;
+    --itchio_border_color: #262626;
+    --itchio_button_color: #5a9dfa;
+    --itchio_button_fg_color: #ffffff;
+    --itchio_button_shadow_color: #4386e3;
+}
