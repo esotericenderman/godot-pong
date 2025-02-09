@@ -75,3 +75,6 @@ LF
 xml
 yaml
 godot
+developement
+gamedev
+gamedevelopment
