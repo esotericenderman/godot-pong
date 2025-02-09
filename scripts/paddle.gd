@@ -42,8 +42,6 @@ func _process(delta: float) -> void:
 
 	var is_computer = get_meta("computer")
 	
-	print("Paddle is computer: " + str(is_computer))
-
 	if (is_computer):
 		computer_move()
 		return

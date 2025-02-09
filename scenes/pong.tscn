@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://c8vfpraselkm2"]
+[gd_scene load_steps=17 format=3 uid="uid://c8vfpraselkm2"]
 
 [ext_resource type="Texture2D" uid="uid://c6cpuw5dpokh6" path="res://assets/images/game/background.svg" id="1_rohbh"]
 [ext_resource type="Script" path="res://scripts/ball.gd" id="2_02qod"]
 [ext_resource type="Texture2D" uid="uid://deqoeg5tolbnn" path="res://assets/images/game/pong/ball.svg" id="3_avyfs"]
 [ext_resource type="Script" path="res://scripts/paddle.gd" id="4_x4vja"]
+[ext_resource type="Script" path="res://scripts/score.gd" id="5_8fmgm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_enhog"]
 friction = 0.0
@@ -138,3 +139,10 @@ freeze = true
 [node name="Collision" type="CollisionShape2D" parent="LeftWall"]
 scale = Vector2(7.2, 7.2)
 shape = SubResource("RectangleShape2D_uqc1y")
+
+[node name="Score" type="RichTextLabel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3, 3)
+text = "0 | 0"
+script = ExtResource("5_8fmgm")
