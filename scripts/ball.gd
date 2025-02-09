@@ -13,41 +13,7 @@ func _ready() -> void:
 	contact_monitor = true
 	max_contacts_reported = 50
 	
-	var parent = get_parent().get_node("Background") as Sprite2D
-	
-	var width = parent.texture.get_size().x * parent.scale.x
-	var height = parent.texture.get_size().y * parent.scale.x
-	
-	print("Background width: " + str(width))
-	print("Background height: " + str(height))
-	
-	self.position = Vector2(width / 2, height / 2)
-	
-	var random = rng.randf()
-	
-	var direction: Vector2
-	if (random > 0.5):
-		direction = Vector2.RIGHT
-	else:
-		direction = Vector2.LEFT
-	
-	var other_random = rng.randf()
-	
-	var vertical: Vector2
-	if (	other_random > 0.5):
-		direction += Vector2.UP
-	else:
-		direction += Vector2.DOWN
-
-	print("Selected random direction for the ball: " + str(direction))
-	
-	const id = 0
-
-	var force = direction * 27000
-	
-	print("Applying force: " + str(force))
-
-	self.apply_force(force)
+	reset()
 
 func _process(delta: float) -> void:
 	var colliding = get_colliding_bodies()
@@ -63,7 +29,33 @@ func _process(delta: float) -> void:
 		
 		if object == right_wall:
 			print("Player's point")
+			reset()
 		elif object == left_wall:
+			reset()
 			print("Computer's point")
 	
+	pass
+
+func reset():
+	var parent = get_parent().get_node("Background") as Sprite2D
+	
+	var screen_size = get_viewport_rect().size
+	self.position = screen_size / 2
+	
+	var random = rng.randf()
+	
+	var angle = deg_to_rad(rng.randf_range(-45, 45)) # Random angle between -45 and 45 degrees
+	var direction = Vector2.RIGHT.rotated(angle) if rng.randi() % 2 == 0 else Vector2.LEFT.rotated(angle)
+
+	print("Selected random direction for the ball: " + str(direction))
+	
+	const id = 0
+
+	var force = direction * 600
+	
+	print("Applying force: " + str(force))
+
+	self.angular_velocity = 0
+	self.linear_velocity = force
+
 	pass
