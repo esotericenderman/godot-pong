@@ -66,6 +66,24 @@ shape = SubResource("RectangleShape2D_inhci")
 scale = Vector2(29, 130)
 texture = SubResource("CanvasTexture_pne15")
 
+[node name="RightPaddle" type="RigidBody2D" parent="."]
+position = Vector2(1075, 525)
+mass = 10.0
+physics_material_override = SubResource("PhysicsMaterial_enhog")
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 10.0
+script = ExtResource("4_x4vja")
+metadata/computer = true
+
+[node name="Collision" type="CollisionShape2D" parent="RightPaddle"]
+scale = Vector2(7.2, 7.2)
+shape = SubResource("RectangleShape2D_inhci")
+
+[node name="Sprite" type="Sprite2D" parent="RightPaddle"]
+scale = Vector2(29, 130)
+texture = SubResource("CanvasTexture_pne15")
+
 [node name="Ball" type="RigidBody2D" parent="."]
 position = Vector2(0, 1)
 physics_material_override = SubResource("PhysicsMaterial_8pjfs")

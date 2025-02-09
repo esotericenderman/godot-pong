@@ -36,11 +36,17 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	print("Resetting x: " + str(starting_x))
-
 	self.position.x = starting_x
 	collider.position.x = collider_starting_x
 	sprite.position.x = sprite_staring_x
+
+	var is_computer = get_meta("computer")
+	
+	print("Paddle is computer: " + str(is_computer))
+
+	if (is_computer):
+		computer_move()
+		return
 
 	var direction: Vector2
 
@@ -54,6 +60,26 @@ func _process(delta: float) -> void:
 		return
 	
 	var force = direction * 45000
+	
+	self.apply_force(force)
+	
+	pass
+
+func computer_move():
+	var ball = get_parent().get_node("Ball") as RigidBody2D
+	
+	var target_y = ball.position.y
+	var current_y = self.position.y
+	
+	var direction: Vector2
+	if (target_y > current_y):
+		direction = Vector2(0, 1)
+	elif (target_y < current_y):
+		direction = Vector2(0, -1)
+	else:
+		return
+		
+	var force = 45000 * direction
 	
 	self.apply_force(force)
 	

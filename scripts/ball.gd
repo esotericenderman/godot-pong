@@ -8,6 +8,9 @@ func _ready() -> void:
 	var width = parent.texture.get_size().x * parent.scale.x
 	var height = parent.texture.get_size().y * parent.scale.x
 	
+	print("Background width: " + str(width))
+	print("Background height: " + str(height))
+	
 	self.position = Vector2(width / 2, height / 2)
 	
 	var random = rng.randf()
