@@ -36,26 +36,33 @@ func _process(delta: float) -> void:
 	
 	pass
 
-func reset():
+func reset():	
+	self.freeze = true  # Temporarily disable physics
 	var parent = get_parent().get_node("Background") as Sprite2D
 	
-	var screen_size = get_viewport_rect().size
-	self.position = screen_size / 2
+	transform.origin.x = 0
+	transform.origin.y = 0
 	
-	var random = rng.randf()
+	var width = parent.texture.get_size().x * parent.scale.x
+	var height = parent.texture.get_size().y * parent.scale.x
 	
-	var angle = deg_to_rad(rng.randf_range(-45, 45)) # Random angle between -45 and 45 degrees
+	global_translate(Vector2(width / 2, height / 2))
+	
+	print("Background width: " + str(width))
+	print("Background height: " + str(height))
+	
+	self.inertia = 0
+
+	# Generate a random angle between -45 and 45 degrees
+	var angle = deg_to_rad(rng.randf_range(-45, 45))
 	var direction = Vector2.RIGHT.rotated(angle) if rng.randi() % 2 == 0 else Vector2.LEFT.rotated(angle)
 
-	print("Selected random direction for the ball: " + str(direction))
-	
-	const id = 0
+	# Set a constant speed
+	var speed = 300  
+	self.linear_velocity = Vector2.ZERO  # Reset any existing velocity
+	self.angular_velocity = 0  # Reset any spin
 
-	var force = direction * 600
-	
-	print("Applying force: " + str(force))
+	print("Ball reset with direction: ", direction, " and speed: ", speed)
 
-	self.angular_velocity = 0
-	self.linear_velocity = force
-
-	pass
+	self.freeze = false  # Re-enable physics
+	self.linear_velocity = direction * speed
