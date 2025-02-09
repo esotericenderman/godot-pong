@@ -51,9 +51,7 @@ func reset(winner: String) -> void:
 	
 	if winner == "player":
 		score.player_points += 1
-		pass
 	elif winner == "computer":
 		score.computer_points += 1
-		pass
-		
+	
 	score.text = str(score.player_points) + " | " + str(score.computer_points)
