@@ -44,6 +44,7 @@ You should have received a copy of the [GNU General Public License][gpl-3.0] alo
 ## Credit
 
 - [Template Repository][template] &copy; [Esoteric Enderman][template-author] licensed under [GPL-3.0][gpl-3.0].
+- [Godot Engine][godot] &copy; [Godot Engine contributors][godot-contributors], Juan Linietsky, Ariel Manzur licensed under the [MIT license][mit-license].
 
 ## Topics
 
@@ -71,6 +72,7 @@ game gamedev games game-development game-2d godot godot-engine game-dev game-dev
 <!-- Websites -->
 
 [fsf]: https://www.fsf.org/
+[godot]: https://godotengine.org/
 
 <!-- Files -->
 
@@ -80,6 +82,10 @@ game gamedev games game-development game-2d godot godot-engine game-dev game-dev
 [ideas]: ./TODO.md
 [citation]: ../CITATION.cff
 [conduct]: ./CODE_OF_CONDUCT.md
+
+[mit-license]: ../licenses/LICENSE-MIT
+
+[godot-contributors]: https://github.com/godotengine/godot/blob/master/AUTHORS.md
 
 <!-- Assets -->
 
