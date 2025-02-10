@@ -8,15 +8,6 @@ matrix:
         - configs/words.txt
     sources:
       - '**/*.md'
-  - name: Itch.io tags
-    aspell:
-      lang: en
-      d: en_US
-    dictionary:
-      wordlists:
-        - configs/words.txt
-    sources:
-      - 'itch/tags.txt'
   - name: JetBrains editors project name
     aspell:
       lang: en
